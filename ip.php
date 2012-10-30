@@ -3,7 +3,7 @@
 
 	function ip($line) {
 		// Set this to something unique ! (md5(time()); for example ...)
-		$serverseed = "lvc1jy3w4i3rnzvho79r4tqp2hzol9l0zytxee35p7v14jugsyfa5ogyxuh0uv1y";
+		$serverseed = "somethingunique";
 		$cancreate  = true;
 
 		// parse and get record data.

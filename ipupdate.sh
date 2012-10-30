@@ -5,9 +5,10 @@
 # that store ip.                   #
 ####################################
 
-UPDATE_URL=${1-"http://cyrbil.fr/ip.php"};
-NAME=${2-"raspberry"};
-AUTH="8b185b29eed263cc420206708372b0db068b339f54";
+UPDATE_URL=${1-"http://myserver.fr/ip.php"};
+NAME=${2-"servername"};
+# auth is a token given by the server, if lost ip update won't be possible.
+AUTH="";
 
 # auth is empty, we need to create new record first
 if [ -z "$AUTH" ]; then
