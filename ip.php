@@ -117,5 +117,4 @@
 ?>
 <!--    IPS DATABASE 
 IP                NAME -->
-70.83.0.226       test
-109.213.97.110    raspberry
+127.0.0.1         localhost
