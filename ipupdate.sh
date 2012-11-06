@@ -5,7 +5,7 @@
 # that store ip.                   #
 ####################################
 
-UPDATE_URL=${1-"http://myserver.fr/ip.php"};
+UPDATE_URL=${1-"http://server.fr/ip.php"};
 NAME=${2-"servername"};
 # auth is a token given by the server, if lost ip update won't be possible.
 AUTH="";
@@ -25,7 +25,7 @@ if [ $? -eq 0 ]; then
     # save it
     TOKEN=`echo "$RESULT" | grep -E 'AuthToken: \w{42}' | sed -r 's/.*([a-f0-9]{42})/\1/'`;
     echo "Saving token $TOKEN";
-    sed -i "s/^AUTH=\".*\";/AUTH=\"${TOKEN}\";/g" $0
+    sed -i "s/^AUTH=\".*\";/AUTH=\"${TOKEN}\";/g" "${BASH_SOURCE[0]}";
     echo "OK";
 else
     echo "Server return an error: $RESULT";
